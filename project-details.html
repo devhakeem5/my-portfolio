@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Project Details">
+    <title>Project Details | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="project-details.css">
+</head>
+
+<body>
+    <div class="bg-animation">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo"><span class="logo-bracket">&lt;</span><span
+                    class="logo-text">Dev</span><span class="logo-bracket">/&gt;</span></a>
+            <ul class="nav-menu">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+                <li><a href="index.html#projects" class="nav-link active">Projects</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation"><span class="hamburger"></span></button>
+        </div>
+    </nav>
+
+    <main class="project-details-page">
+        <div class="container">
+            <!-- Back Button -->
+            <a href="index.html#projects" class="back-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7" />
+                </svg>
+                <span>Back to Projects</span>
+            </a>
+
+            <!-- Project Header -->
+            <header class="project-header">
+                <h1 class="project-title gradient-text" id="projectTitle">Loading...</h1>
+            </header>
+
+
+            <!-- Project Description -->
+            <section class="project-description-section">
+                <h2>About This Project</h2>
+                <p id="projectDescription"></p>
+            </section>
+
+            <!-- Technologies & Features -->
+            <section class="project-info-section" id="projectInfoSection">
+                <div class="info-grid">
+                    <div class="info-column">
+                        <h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                            </svg> Technologies Used</h3>
+                        <div class="tech-stack" id="techStack"></div>
+                    </div>
+                    <div class="info-column">
+                        <h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="22 11.08 12 19 2 11.08" />
+                                <polyline points="22 4 12 11.92 2 4" />
+                            </svg> Key Features</h3>
+                        <ul class="features-list" id="featuresList"></ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Project Links -->
+            <section class="project-links-section" id="projectLinksSection" style="display: none;">
+                <h2>Project Links</h2>
+                <div class="project-links" id="projectLinks"></div>
+            </section>
+
+            <!-- Screenshots Gallery -->
+            <section class="screenshots-section">
+                <h2>Screenshots</h2>
+                <div class="screenshots-grid" id="screenshotsGrid"></div>
+            </section>
+
+            <!-- Image Lightbox -->
+            <div class="lightbox" id="lightbox">
+                <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+                <button class="lightbox-btn prev" onclick="changeLightboxImage(-1)">&#10094;</button>
+                <img src="" alt="Screenshot" id="lightboxImage">
+                <button class="lightbox-btn next" onclick="changeLightboxImage(1)">&#10095;</button>
+                <div class="lightbox-counter"><span id="currentIndex">1</span> / <span id="totalImages">1</span></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" style="margin-top: 60px;">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 Built with 💙 Flutter & Love</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="project-details.js"></script>
+</body>
+
+</html>
