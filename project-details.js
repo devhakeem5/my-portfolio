@@ -5,7 +5,8 @@ const projectsData = {
         description: 'A comprehensive multi-vendor e-commerce marketplace application delivering a seamless shopping experience with optimized performance.',
         tech: {
             framework: 'Flutter',
-            stateManagement: 'GetX'
+            stateManagement: 'GetX',
+            notifications: 'FCM Notifications'
         },
         features: [
             'Multi-vendor architecture with specialized store profiles',
@@ -21,8 +22,9 @@ const projectsData = {
         description: 'A professional educational platform featuring high-security video streaming and offline learning capabilities.',
         tech: {
             framework: 'Flutter',
-            stateManagement: 'GetX',
-            backend: 'Supabase'
+            stateManagement: 'Bloc',
+            backend: 'Supabase',
+            notifications: 'FCM Notifications'
         },
         features: [
             'Advanced video encryption with custom DRM protection',
@@ -58,6 +60,7 @@ const projectsData = {
         description: 'A high-performance video engine that enables frame-accurate editing without re-encoding or quality loss.',
         tech: {
             framework: 'Flutter',
+            stateManagement: 'Provider',
             native: 'Kotlin',
             processing: 'FFmpeg'
         },
@@ -152,8 +155,9 @@ const projectsData = {
         description: 'An advanced network management suite for large-scale MikroTik operations.',
         tech: {
             framework: 'Flutter',
-            stateManagement: 'BLoC',
-            api: 'RouterOS API'
+            stateManagement: 'Bloc',
+            api: 'RouterOS API',
+            notifications: 'FCM Notifications'
         },
         features: [
             'Automated enterprise-grade voucher generation and printing',
@@ -186,8 +190,9 @@ const projectsData = {
         description: 'A vital utility application providing real-time balance tracking for Yemeni telecom operators.',
         tech: {
             framework: 'Flutter',
-            api: 'Official Yemen Mobile API',
-            notifications: 'FCM / Local'
+            stateManagement: 'Provider',
+            api: 'Yemen Mobile & Custom Laravel API',
+            notifications: 'FCM Notifications'
         },
         features: [
             'Direct integration with official telecom billing systems',
@@ -233,6 +238,7 @@ function loadProject() {
 
     // Populate header
     document.getElementById('projectTitle').textContent = project.title;
+    document.getElementById('navLogoText').textContent = project.title.split(' (')[0]; // Simplify if name has brackets like Raseed
 
     // Description
     document.getElementById('projectDescription').textContent = project.description;

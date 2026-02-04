@@ -338,6 +338,7 @@ button {
     font-weight: 700;
     background: var(--gradient-1);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -1045,6 +1046,7 @@ button {
     margin-bottom: 16px;
     background: var(--gradient-1);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -1312,13 +1314,13 @@ button {
     }
 
     .hero-stats {
-        flex-direction: column;
-        gap: 16px;
+        flex-wrap: wrap;
+        gap: 20px;
     }
 
     .stat-divider {
-        width: 60px;
-        height: 1px;
+        width: 1px;
+        height: 30px;
     }
 
     .skills-grid,
